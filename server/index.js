@@ -43,7 +43,6 @@ const io = new Server(server, {
     origin: process.env.SOCKET_ORIGIN, // Adjust the origin to match your URL
     methods: ['GET', 'POST'],
   },
-  port: PORT,
 })
 
 global.onlineUsers = new Map()

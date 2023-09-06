@@ -2,7 +2,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build":"npm install && prisma generate",
   },
   "dependencies": {
     "@prisma/client": "^5.1.1",

@@ -21,7 +21,7 @@ function ChatList() {
   return (
     <div
       className={`flex bg-[black] text-white flex-col max-h-screen z-20 w-screen lg:w-full md:visible ${
-        isOpenChatList ? 'visible' : 'hidden'
+        isOpenChatList ? 'hidden' : 'visible'
       }`}
     >
       {pageType === 'default' && (

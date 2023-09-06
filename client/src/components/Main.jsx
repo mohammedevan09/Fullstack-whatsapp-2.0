@@ -20,7 +20,9 @@ import IncomingVideoCall from './common/IncomingVideoCall'
 import IncomingCall from './common/IncomingCall'
 import { setOnlineUsers } from '@/context/userReducer'
 
-export let socket = io(HOST)
+export let socket = io(HOST, {
+  transports: ['websocket'],
+})
 function Main() {
   const { currentChatUser, userInfo } = useSelector((state) => state?.user)
   const { messagesSearch } = useSelector((state) => state?.message)

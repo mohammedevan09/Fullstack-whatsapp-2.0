@@ -10,7 +10,7 @@ import responsiveReducer from './responsiveReducer'
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['call'],
+  blacklist: ['call', 'responsive'],
 }
 
 const rootReducer = combineReducers({

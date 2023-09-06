@@ -54,4 +54,8 @@ body {
     height: 392px !important;
     width: 283px !important;
   }
+  .responsive-three {
+    visibility: hidden !important;
+    display: none;
+  }
 }

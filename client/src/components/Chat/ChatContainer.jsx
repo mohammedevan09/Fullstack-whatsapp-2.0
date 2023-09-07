@@ -14,7 +14,7 @@ function ChatContainer() {
     <div className="h-[80vh] w-full relative flex-grow overflow-auto custom-scrollbar pt-3 px-3">
       <div className="for-image bg-fixed">
         <div className="flex w-full">
-          <div className="flex flex-col justify-end w-full gap-1 overflow-auto bg-[#032332db]">
+          <div className="flex flex-col justify-end w-full overflow-auto bg-[#032332db]">
             <ScrollToBottom>
               {chatMessages?.map((message, i) => {
                 return (
@@ -24,20 +24,32 @@ function ChatContainer() {
                       message?.senderId === currentChatUser?.id
                         ? 'justify-start'
                         : 'justify-end'
-                    } flex self-end my-1`}
+                    } flex self-end my-3`}
                   >
                     {message?.type === 'text' && (
                       <div
-                        className={`text-white px-2 py-[5px] text-sm rounded-md flex gap-2 items-center max-w-[45%] ${
+                        className={`text-white px-2 py-[5px] text-sm rounded-md flex gap-2 items-center max-w-[65%] justify-between ${
                           message?.senderId === currentChatUser?.id
                             ? 'bg-incoming-background'
                             : 'bg-outgoing-background'
                         }`}
                       >
-                        <span className="break-word max-w-[75%]">
+                        <span
+                          className={`break-word ${
+                            message?.message?.length > 24
+                              ? 'max-w-[65%]'
+                              : 'max-w-[75%]'
+                          }`}
+                        >
                           {message?.message}
                         </span>
-                        <div className="flex gap-1 items-end">
+                        <div
+                          className={`flex gap-1 items-end ${
+                            message?.senderId === currentChatUser?.id
+                              ? ''
+                              : 'self-end w-[75px]'
+                          }`}
+                        >
                           <span className="text-bubble-meta text-[11px] pt-1 min-w-fit">
                             {calculateTime(message?.createdAt)}
                           </span>

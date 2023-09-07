@@ -61,7 +61,7 @@ function ChatListHeader() {
             />
             {logout && (
               <button
-                className="text-black absolute text-sm right-3 bg-white px-2 py-2 rounded-lg font-bold flex justify-center items-center"
+                className="text-black absolute text-sm right-3 bg-white px-2 py-2 rounded-lg font-bold flex justify-center items-center mt-3"
                 onClick={logingOut}
               >
                 Logout

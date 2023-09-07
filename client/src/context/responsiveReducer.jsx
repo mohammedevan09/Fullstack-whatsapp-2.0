@@ -3,7 +3,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  isOpenChatList: true,
+  isOpenChatList: false,
   isOpenSearchMessage: false,
 }
 

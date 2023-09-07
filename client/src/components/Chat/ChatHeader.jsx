@@ -101,7 +101,7 @@ function ChatHeader() {
           />
           {showExit && (
             <button
-              className="text-black absolute text-sm right-3 flex bg-white px-2 py-1 rounded-lg font-bold"
+              className="text-black absolute text-sm right-3 flex bg-white px-2 py-1 rounded-lg font-bold mt-3"
               onClick={() => dispatch(setCurrentChatUser(undefined))}
             >
               Exit
